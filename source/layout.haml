@@ -8,7 +8,6 @@
     %meta{:content => "", :name => "Nicola Paolucci"}/
 
     %link{:href => "css/style.css", :rel => "stylesheet"}/
-    -#%link{:href => "css/bootstrap.css", :rel => "stylesheet"}/
     /[if lt IE 9]
       <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     %link{:href => "img/favicon.ico", :rel => "shortcut icon"}/
@@ -19,19 +18,6 @@
     %link{:href => "http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic", :rel=> "stylesheet", :type=> "text/css"}/
   %body.impress-not-supported
     = yield
-    %script{:src => "js/vendor/jquery-1.7.1.js"}
-    %script{:src => "js/vendor/bootstrap-transition.js"}
-    %script{:src => "js/vendor/bootstrap-alert.js"}
-    %script{:src => "js/vendor/bootstrap-modal.js"}
-    %script{:src => "js/vendor/bootstrap-dropdown.js"}
-    %script{:src => "js/vendor/bootstrap-scrollspy.js"}
-    %script{:src => "js/vendor/bootstrap-tab.js"}
-    %script{:src => "js/vendor/bootstrap-tooltip.js"}
-    %script{:src => "js/vendor/bootstrap-popover.js"}
-    %script{:src => "js/vendor/bootstrap-button.js"}
-    %script{:src => "js/vendor/bootstrap-collapse.js"}
-    %script{:src => "js/vendor/bootstrap-carousel.js"}
-    %script{:src => "js/vendor/bootstrap-typeahead.js"}
     %script{:src => "js/vendor/impress.js"}
   :javascript
     impress().init();
