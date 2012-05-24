@@ -7,9 +7,8 @@
     %meta{:content => "", :name => "Git Crash Course"}/
     %meta{:content => "", :name => "Nicola Paolucci"}/
 
-    %link{:href => "css/bootstrap.css", :rel => "stylesheet"}/
     %link{:href => "css/style.css", :rel => "stylesheet"}/
-    %link{:href => "css/bootstrap.css", :rel => "stylesheet"}/
+    -#%link{:href => "css/bootstrap.css", :rel => "stylesheet"}/
     /[if lt IE 9]
       <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     %link{:href => "img/favicon.ico", :rel => "shortcut icon"}/
@@ -18,7 +17,7 @@
     %link{:href => "img/apple-touch-icon-114x114.png", :rel => "apple-touch-icon", :sizes => "114x114"}/
     %link{:href => "http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800", :rel=> "stylesheet", :type=> "text/css"}/
     %link{:href => "http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic", :rel=> "stylesheet", :type=> "text/css"}/
-  %body
+  %body.impress-not-supported
     = yield
     %script{:src => "js/vendor/jquery-1.7.1.js"}
     %script{:src => "js/vendor/bootstrap-transition.js"}
@@ -33,3 +32,6 @@
     %script{:src => "js/vendor/bootstrap-collapse.js"}
     %script{:src => "js/vendor/bootstrap-carousel.js"}
     %script{:src => "js/vendor/bootstrap-typeahead.js"}
+    %script{:src => "js/vendor/impress.js"}
+  :javascript
+    impress().init();
