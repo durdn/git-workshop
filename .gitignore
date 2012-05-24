@@ -1,0 +1,6 @@
+*.pyc
+*.sqlite3
+static/.sass-cache
+local_settings.py
+.DS_Store
+.sass-cache/
