@@ -22,11 +22,17 @@ def parse_impress(line):
 def tokenize(lines):
     curr_token = []
     cue = '^\[.*?\]'
+    first = True
     for line in lines:
         if re.search(cue,line):
-            print '<div id="%s" class="step" data-x="%s" data-y="%s" data-rotate="%s" data-scale="%s">' % parse_impress(line)
+            if not first:
+                print '<!-- </div> -->'
+            first = False
+            print '<!-- <div id="%s" class="step" data-x="%s" data-y="%s" data-rotate="%s" data-scale="%s"> -->' % parse_impress(line)
         else:
             print line,
+    print '<!-- </div> -->'
+
 
 
         

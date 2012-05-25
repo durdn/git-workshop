@@ -1,4 +1,4 @@
-set :markdown, :layout_engine => :haml
+set :md, :layout_engine => :haml
 set :css_dir, "css"
 set :js_dir, "js"
 set :images_dir, "img"
