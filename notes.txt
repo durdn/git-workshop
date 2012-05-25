@@ -1,9 +1,30 @@
-git workshop
+[overview] scale 10 x 3000 y 1500
+[bigtitle] scale 10 x 2450 y 0
+# git @ Spindrift
 
-I have 15 years of experience in our industry, mainly in development of backend systems, web applications, ATG.
+[title] scale 4 x 0 y 800
+# who am I?
+
+[] x -1000 y 1500
+> Nicola Paolucci, 
+> %a{:href => "http://twitter.com/durdn"}@durdn
+> on twitter, hacker and technology enthusiast, 
+> %strong git evangelist 
+> (apparently).
+
+But most importantly: Diablo 3 Player.
+
+[] x 0 y 1500
+> %strong 15 years 
+> of experience in our industry, mainly in development of backend systems, web applications, ATG.
+
+Convinced Philips to switch to subversion in early 2000s
+
+hacked a deployment system based on arch (who remembers that?)
+
 I started using git in a real private project in May 2008
 
-more recently I've been fulfilling the role of branch manager (not release manager) at Delixl during the big production rollout. Using git svn.
+more recently I've been fulfilling the role of branch manager (not release manager) at DeliXL during the big production rollout. Using git svn.
 
 Caveats: 
 - I use the command line, I would not talk at all about existing graphical clients for win/osx or plugins for Eclipse, though they exist.
