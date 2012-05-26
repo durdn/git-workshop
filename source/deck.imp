@@ -7,9 +7,9 @@
 
 [] scale 0 x -1000 y 1500
 > Nicola Paolucci, 
-> %a{:href => "http://twitter.com/durdn"}@durdn
+> [@durdn](http://twitter.com/durdn)
 > on twitter, hacker and technology enthusiast, 
-> %strong git evangelist 
+> *git evangelist*
 > (apparently).
 
 But most importantly: Diablo 3 Player.
@@ -18,26 +18,125 @@ But most importantly: Diablo 3 Player.
 > %strong 15 years 
 > of experience in our industry, mainly in development of backend systems, web applications, ATG.
 
-Convinced Philips to switch to subversion in early 2000s
+Convinced Philips to switch to subversion to CVS in early 2000s
 
-hacked a deployment system based on arch (who remembers that?)
+Hacked a deployment system based on arch (who remembers that?)
 
 I started using git in a real private project in May 2008
 
-more recently I've been fulfilling the role of branch manager (not release manager) at DeliXL during the big production rollout. Using git svn.
+More recently I've been fulfilling the role of branch manager (not release manager) at DeliXL during the big production rollout. Using git svn.
 
-Caveats: 
-- I use the command line, I would not talk at all about existing graphical clients for win/osx or plugins for Eclipse, though they exist.
-- I don't know much about tfs, clearcase, perforce etc...
+[] scale 0 x next y 1500
+> Caveats: I use the command line, I would not talk at all about existing graphical clients for win/osx or plugins for Eclipse, though they exist.
 
-A high level overview of the differences and benefits of git compared to svn
-----------------------------------------------------------------------------
+[why] scale 4 x next y 800
+# Why Git?
 
-I have prepared some slides but this new git website is done so well, why not use it:
+[] scale 0 x next y 1500
+
+> A high level overview of the differences and benefits of git compared to other centralized systems
+
+[] scale 0 x next y 1500
+
+> Branching and Merging
+
+- Frictionless Context Switching.
+- Role-Based Codelines.
+- Feature Based Workflow.
+- Disposable Experimentation.
+
 http://git-scm.com/about
 
-High level overview of the architectural concepts of git
---------------------------------------------------------
+[] scale 0 x next y 1500
+
+> git is *fast*
+
+> no, really...
+
+http://chart.apis.google.com/chart?chxt=x&cht=bvs&chl=git|svn&chd=t:0.601,82.843&chds=0,82.843&chs=100x125&chco=E09FA0|E05F49&chf=bg,s,fcfcfa&chtt=Log%20(File)
+
+[] scale 0 x next y 1500
+
+> git is distributed
+
+- Multiple backups
+- Any workflow
+  - Subversion style workflow
+  - Integration manager workflow
+  - Dictator And Lieutenants workflow
+  - etc.
+
+[] scale 0 x next y 1500
+
+> data assurance
+
+- Cryptographic integrity of every bit of your project.
+
+[] scale 0 x next y 1500
+
+> The Staging Area
+
+http://git-scm.com/images/about/index1.png
+
+- Intermediate area where commits are prepared.
+- Ignore this feature adding -a to your commits
+
+ 
+[base] scale 4 x 0 y 800
+# Important Concepts
+
+> Git tracks content, not files
+> Snapshots, not differences
+> Everything is local
+
+http://git-scm.com/figures/18333fig0104-tn.png
+http://git-scm.com/figures/18333fig0105-tn.png
+
+[] scale 0 x next y 1500
+
+> Any file can be in *3* states
+
+- Committed
+- Modified
+- Staged
+
+http://git-scm.com/figures/18333fig0106-tn.png
+
+[] scale 0 x next y 1500
+
+> File status lifecycle 
+
+http://git-scm.com/figures/18333fig0201-tn.png
+
+
+[basicsdemo] scale 4 x 0 y 800
+# BASICS DEMO
+
+[] scale 0 x next y 1500
+
+> First steps with Git
+
+- git init
+- git config
+- git add
+- git commit
+- git status 
+- Ignore files in .gitignore
+- git diff (--cached)
+- git commit
+- git rm (--cached)
+- git mv
+- git log niceties (-10, --oneline, --stat, --graph, --author, --since)
+
+[] scale 0 x next y 1500
+
+> Undoing things, important to learn
+
+- Change the last (local) commit: git commit --amend
+- Unstage a file: git reset <file>
+- Undo your changes: git checkout <file>
+
+
 - local branches
 - remote branches
 - the staging area / index
