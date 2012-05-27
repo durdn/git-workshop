@@ -1,106 +1,436 @@
-%body.impress-not-supported
-  .fallback-message
+%section
+  %h1{:style => "margin-top:110px"}
+    Git at
+    %em Spindrift
+  %h4{:style => "font-size:30px; color:#fff; margin-top: -16px"}
+    High Altitude and Crash
+    %em Course
+  #logo
+  %footer
+    Nicola Paolucci
+    %br/
+    = succeed "," do
+      %em utrecht
+    %time{:datetime => "2012-05-30"}
+      May 30
+      %sup> th
+      , 2012
+  %details
+%section
+  %hgroup{:style => "margin-top: 80px"}
+    %h2 who am I?
     %p
-      Your browser
-      %b doesn't support the features required
-      by impress.js, so you are presented with a simplified version of this presentation.
+      Nicola Paolucci, 
+      %a{:href => "http://twitter.com/durdn", :target => "_blank"} durdn
+      on twitter, hacker and technology enthusiast,
+      %br/
+      %em
+        git evangelist
+      (apparently).
+    %ul.incremental
+      %li But most importantly: Diablo 3 Player.
+
+%section
+  %hgroup{:style => "margin-top: 80px"}
+    %h3
+      %em 15 years 
+      of experience in our industry, mainly in development of backend systems, web applications, ATG.
+    %ul
+      %li
+        I started using git in a real project in 
+        %em May 2008
+      %li 
+        More recently
+        %em Branch Manager
+        at DeliXL during the first big production rollout. Using
+        %em git svn.
+        
+  %details
+    %li More recently %em Branch Manager (not release manager) at DeliXL during the first big production rollout. Using git svn.
+    %li Convinced Philips to switch to subversion to CVS in early 2000s
+    %li Hacked a deployment system based on arch (who remembers that?)
+
+%section
+  %hgroup{:style => "margin-top: 80px"}
+    %h2
+      Part 1:
+      %em Why
+      Git?
+
     %p
-      For the best experience please use the latest
-      = succeed "," do
-        %b Chrome
-      %b Safari
-      or
-      %b Firefox
-      browser.
-  #impress
-    #overview.step{"data-scale" => "10", "data-x" => "3000", "data-y" => "1500"}
-    #bigtitle.step{"data-scale" => "10", "data-x" => "2450", "data-y" => "0"}
-      %h1
-        git @ Spindrift
-    #title.step{"data-scale" => "4", "data-x" => "0", "data-y" => "800"}
-      %h1
-        who am I?
-    .step.slide{"data-x" => "-1000", "data-y" => "1500"}
-      %q 
-        Nicola Paolucci, 
-        %a{:href => "http://twitter.com/durdn"}@durdn
-        on twitter, hacker and technology enthusiast, 
-        %strong git evangelist 
-        (apparently).
-      %p But most importantly: Diablo 3 Player.
-    .step.slide{"data-x" => "0", "data-y" => "1500"}
-      %q
-        %strong 15 years 
-        of experience in our industry, mainly in development of backend systems, web applications, ATG.
-      %p Convinced Philips to switch to subversion in early 2000s
-      %p hacked a deployment system based on arch (who remembers that?)
-      %p I started using git in a real private project in May 2008
-      %p more recently I've been fulfilling the role of branch manager (not release manager) at DeliXL during the big production rollout. Using git svn.
-    .step.slide{"data-x" => "1000", "data-y" => "1500"}
-      %q
-        Would you like to
-        %strong impress your audience
-        with
-        %strong stunning visualization
-        of your talk?
-    -##its.step{"data-rotate" => "90", "data-scale" => "5", "data-x" => "850", "data-y" => "3000"}
-      -#%p
-        -#It's a
-        -#%strong presentation tool
-        -#%br/
-        -#inspired by the idea behind
-        -#%a{:href => "http://prezi.com"} prezi.com
-        -#%br/
-        -#and based on the
-        -#%strong power of CSS3 transforms and transitions
-        -#in modern browsers.
-    -##big.step{"data-rotate" => "180", "data-scale" => "6", "data-x" => "3500", "data-y" => "2100"}
-      -#%p
-        -#visualize your
-        -#%b big
-        -#%span.thoughts thoughts
-    -##tiny.step{"data-rotate" => "300", "data-scale" => "1", "data-x" => "2825", "data-y" => "2325", "data-z" => "-3000"}
-      -#%p
-        -#and
-        -#%b tiny
-        -#ideas
-    -##ing.step{"data-rotate" => "270", "data-scale" => "6", "data-x" => "3500", "data-y" => "-850"}
-      -#%p
-        -#by
-        -#= succeed "," do
-          -#%b.positioning positioning
-        -#%b.rotating rotating
-        -#and
-        -#%b.scaling scaling
-        -#them on an infinite canvas
-    -##imagination.step{"data-scale" => "6", "data-x" => "6700", "data-y" => "-300"}
-      -#%p
-        -#the only
-        -#%b limit
-        -#is your
-        -#%b.imagination imagination
-    -##source.step{"data-rotate" => "20", "data-scale" => "4", "data-x" => "6300", "data-y" => "2000"}
-      -#%p want to know more?
-      -#%q
-        -#%a{:href => "http://github.com/bartaz/impress.js"}> use the source
-        -#, Luke!
-    -##one-more-thing.step{"data-scale" => "2", "data-x" => "6000", "data-y" => "4000"}
-      -#%p one more thing...
-    -##its-in-3d.step{"data-rotate-x" => "-40", "data-rotate-y" => "10", "data-scale" => "2", "data-x" => "6200", "data-y" => "4300", "data-z" => "-100"}
-      -#%p
-        -#%span.have have
-        -#%span.you you
-        -#%span.noticed noticed
-        -#%span.its it's
-        -#%span.in in
-        -#= succeed "?" do
-          -#%b
-            -#3D
-            -#%sup *
-      -#%span.footnote * beat that, prezi ;)
-  .hint
-    %p Use a spacebar or arrow keys to navigate
-  :javascript
-    if ("ontouchstart" in document.documentElement) { 
-        document.querySelector(".hint").innerHTML = "Tap on the left or right to navigate";
-    }
+      A
+      %em high level overview
+      of the differences and benefits of git compared to other centralized systems
+
+%section
+  %hgroup{:style => "margin-top: 80px"}
+    %h3 Overview
+    %ul
+      %li 
+        Branching and Merging
+      %li 
+        Git is
+        %em fast
+      %li 
+        Git is
+        %em distributed
+      %li 
+        Many possible 
+        %em workflows
+      %li 
+        Data Assurance
+      %li 
+        And much more...
+
+  %details
+    http://git-scm.com/about
+%section
+  %hgroup{:style => "margin-top: 80px"}
+    %h3 Branching and Merging
+    %ul.incremental
+      %li Frictionless Context Switching
+      %li Role-Based Codelines
+      %li Feature Based Workflow
+      %li Disposable Experimentation
+
+  %details
+    http://git-scm.com/about
+
+%section
+  %hgroup{:style => "margin-top: 80px"}
+    %h3
+      git is 
+      %em fast
+    %ul
+      %li no, really...
+      %li
+        Look at this
+        %a{:href => "http://chart.apis.google.com/chart?chxt=x&cht=bvs&chl=git|svn&chd=t:0.601,82.843&chds=0,82.843&chs=100x125&chco=E09FA0|E05F49&chf=bg,s,fcfcfa&chtt=Log%20(File)", :target => "_blank"} Chart
+
+%section
+  %hgroup{:style => "margin-top: 80px"}
+    %h3
+      git is
+      %em distributed
+    %ul.incremental
+      %li Multiple backups
+      %li Any workflow
+%section
+  %hgroup{:style => "margin-top: 80px"}
+    %h3 Many Possible Workflows
+    %ul.incremental
+      %li Subversion style workflow
+      %li Integration manager workflow
+      %li Dictator And Lieutenants workflow
+      %li etc.
+
+%section
+  %hgroup{:style => "margin-top: 80px"}
+    %h3 Data Assurance
+    %ul
+      %li Cryptographic integrity of every bit of your project
+
+%section
+  %hgroup{:style => "margin-top: 80px"}
+    %h3
+      The
+      %em Staging
+      Area
+    %ul
+      %li Intermediate area where commits are prepared.
+      %li Ignore this feature adding -a to your commits
+      http://git-scm.com/images/about/index1.png
+
+%section
+  %hgroup{:style => "margin-top: 80px"}
+    %h3 And I will add
+    %ul
+      %li
+        Ability to
+        %em rewrite
+        and
+        %em clean
+        your code history
+      %li
+        Ability to 
+        %em search
+        the codebase like a
+        %em pro
+      %li
+        Powerful, rock-solid interoperability with
+        %em subversion
+ 
+%section
+  %hgroup
+    %h2
+      Part 2:
+      %em Important
+      Concepts
+      and First
+      %em DEMO
+
+%section
+  %hgroup{:style => "margin-top: 80px"}
+  %h3 Important Concepts
+  %ul.incremental
+    %li Git tracks content, not files
+    %li Snapshots, not differences
+    %li Everything is local
+
+    http://git-scm.com/figures/18333fig0104-tn.png
+    http://git-scm.com/figures/18333fig0105-tn.png
+
+%section
+  %hgroup{:style => "margin-top: 80px"}
+    %h3 Local File Lifecycle
+    
+    %ul
+      %li 
+        Any file can be in
+        %em 3 states
+      %li Committed
+      %li Modified
+      %li Staged
+
+    http://git-scm.com/figures/18333fig0106-tn.png
+
+%section
+  %hgroup{:style => "margin-top: 80px"}
+    %h3 File status lifecycle 
+    http://git-scm.com/figures/18333fig0201-tn.png
+
+%section
+  %hgroup
+  %h2 First DEMO
+  %details
+    %pre
+      \# DEMO PART1 BASIC STUFF
+      mkdir demo1
+      cd demo1
+      git init
+      git config [--global] user.name Bob
+      git config [--global] user.email bob@spindrift.com
+      touch AUTHORS
+      touch README
+      touch LICENSE
+      touch source{1,2,3,4,5,6,7,8,9}.txt
+      git status
+      git add source*
+      git status
+      git commit -m"My first commit"
+      git status
+      git log
+      git config -l
+      git config alias.ci commit
+      git config alias.ls log\--oneline
+
+      \# Ignore files in .gitignore
+
+      git diff (--cached)
+      git commit
+      git rm (--cached)
+      git mv
+      git log niceties (-10, --oneline, --stat, --graph, --author, --since)
+
+      \# Undoing things, important to learn
+
+      Change the last (local) commit: git commit --amend
+      Unstage a file: git reset <file>
+      Undo your changes: git checkout <file>
+      Difference between reset and revert
+      Going back in time
+
+      \# 2 developers setup cooperation
+      git clone demo1/ demo2
+      cd demo2/
+      git status
+      git log --oneline
+      git config user.email janis@spindrift.com
+      git config user.name Janis
+
+      \# How to handle conflicts
+
+      git pull
+      git status
+      [git mergetool]
+      git add
+      git commit
+
+%section
+  %hgroup{:style => "margin-top: 80px"}
+    %h2 
+      %em ALERT
+    
+    %p 
+      I use the
+      %em command line
+      , I will not talk about existing graphical clients for win/osx/linux or plugins for 
+      %em Eclipse
+      , though they exist.
+
+%section
+  %hgroup
+    %h2
+      Survived The Demo?
+    %h4
+      And the command line galore?
+
+%section
+  %hgroup
+    %h2 
+      Part 3:
+      %em Branches
+      And Real World Usage
+      %em DEMO
+
+%section
+  %hgroup{:style => "margin-top: 80px"}
+    %h3
+      What is a Git
+      %em Branch
+    %ul.incremental
+      %li
+        still only talking about
+        %em local
+        branches
+      %li 
+        first let's review what is a commit. see
+        %a{:href => "http://git-scm.com/figures/18333fig0301-tn.png", :target => "_blank" } image
+
+      %li
+        A branch is simply a lightweight 
+        %em movable pointer
+        to a commit. see 
+        %a{:href => "http://git-scm.com/figures/18333fig0303-tn.png", :target => "_blank" } image
+  %details
+    http://git-scm.com/book/en/Git-Branching-What-a-Branch-Is
+
+    Git repository now these objects: one blob for the contents of each of your three files, one tree that lists the contents of the directory and specifies which file names are stored as which blobs, and one commit with the pointer to that root tree and all the commit metadata.
+
+%section
+  %hgroup
+  %h2 Branch and Real World Usage DEMO
+  %details
+    %pre
+
+%section
+  %hgroup
+    %h2
+      So Far Everything Was
+      %em Local
+    %h4
+      We want remote repositories and distributed work!
+
+%section
+  %hgroup{:style => "margin-top: 80px"}
+    %h3
+      Remote Repositories and Cooperation
+    %ul.incremental
+      %li
+
+%section
+  %hgroup
+    %h2
+      DEMO REMOTES AND COOPERATION
+
+%section
+  %hgroup{:style => "margin-top: 80px"}
+    %h3
+      Rewriting History and going back in Time
+    %ul
+      %li Rebase interactive (git rebase -i HEAD~10)
+      %li branch and use
+      %pre git reset --hard
+      %li
+        %em ALERT, you must know what you are doing!
+
+%section
+  %hgroup{:style => "margin-top: 80px"}
+    %h3
+      Searching The
+      %em Codebase
+    %ul
+      %li Files that match pattern
+      %li Changes to a file
+      %li Who did what
+      %li grep the codebase at lightning speed
+      %li Search all commits for a Jira issue
+      %li Check if a svn fix has been applied to the production branch
+      %li Who and when a piece of code was removed
+
+%section
+  %hgroup
+    %h2
+      DEMO SEARCH SUPERPOWERS
+
+%section
+  %hgroup{:style => "margin-top: 80px"}
+    %h3
+      Interoperability with Subversion
+    %ul.incremental
+      %li Fasten your seatbelts
+      %li This requires you to grasp perfectly well all of the above, and some more
+      %li git svn clone
+      %li git svn rebase
+      %li git svn dcommit
+
+%section
+  %hgroup
+    %h2
+      DEMO SVN INTEROPERABILITY
+    
+%section
+  %h2 Thank you!
+  %ul
+    %li
+      %a{:href => "http://twitter.com/durdn"} @durdn
+      on twitter
+    %li
+      %em aliases
+      and the rest of my
+      %em
+        %a{:href => "https://github.com/durdn/cfg/blob/master/.gitconfig", :target => "_blank"} .gitconfig
+      is at 
+      %em
+        %a{:href => "http://github.com/durdn/cfg"} github
+    %li
+      All you've seen and more can be found on the redesigned
+      %a{:href => "http://git-scm.com/about", :target => "_blank"} git-scm
+      website
+
+
+%section
+  %pre
+    local branches
+    remote branches
+    the staging area / index
+    the stash
+    the power to rewrite history!
+    rebase magic
+
+    local branches
+    listing commits
+    tags and range operations
+    rebase to clean up history
+    pull vs rebase
+
+    interactivity commit --interactive, rebase --interactive
+
+    A hands on demo on the basic workflow with git
+    //-------------------------------------------------------
+    basic flow: clone, pull, code, push
+    proper flow with feature branch: clone, pull, feature branch, rebase branch, merge master, push
+    reset and reset hard
+    discarding local changes
+    discarding commits in the local branch
+    travel back in time with reset --hard
+
+
+    A hands on demo of interoperability with svn
+    A hands on demo of lightweight branch management with git/svn.
+    Much needed tips needed for git/svn interoperability
+
+
+    Footnotes:
+    you can find the aliases used in this presentation at:
+    https://github.com/durdn/cfg/blob/master/.gitconfig

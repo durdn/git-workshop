@@ -1,0 +1,51 @@
+# DEMO PART1 BASIC STUFF
+mkdir demo1
+cd demo1
+git init
+git config [--global] user.name Bob
+git config [--global] user.email bob@spindrift.com
+touch AUTHORS
+touch README
+touch LICENSE
+touch source{1,2,3,4,5,6,7,8,9}.txt
+git status
+git add source*
+git status
+git commit -m"My first commit"
+git status
+git log
+git config -l
+git config alias.ci commit
+git config alias.ls log\--oneline
+
+# Ignore files in .gitignore
+
+git diff (--cached)
+git commit
+git rm (--cached)
+git mv
+git log niceties (-10, --oneline, --stat, --graph, --author, --since)
+
+\# Undoing things, important to learn
+
+Change the last (local) commit: git commit --amend
+Unstage a file: git reset <file>
+Undo your changes: git checkout <file>
+Difference between reset and revert
+Going back in time
+
+\# 2 developers setup cooperation
+git clone demo1/ demo2
+cd demo2/
+git status
+git log --oneline
+git config user.email janis@spindrift.com
+git config user.name Janis
+
+\# How to handle conflicts
+
+git pull
+git status
+[git mergetool]
+git add
+git commit

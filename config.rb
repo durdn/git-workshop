@@ -1,8 +1,8 @@
 set :md, :layout_engine => :haml
 set :css_dir, "css"
 set :js_dir, "js"
-set :images_dir, "img"
-page "index.html", :layout => "layout"
+set :images_dir, "assets"
+page "index.html"
 
 configure :build do
   # For example, change the Compass output style for deployment
