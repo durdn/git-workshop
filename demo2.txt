@@ -1,0 +1,93 @@
+echo DEMO2 BRANCHING
+
+cd demo1/
+git st
+git ls
+cat source1.txt 
+git co -b feature1
+git ls
+vim AUTHORS
+git st
+git add AUTHORS 
+git status
+git ci -am"Created AUTHORS file"
+vim AUTHORS 
+git ci -am"Moved developers to contributors section"
+vim AUTHORS 
+git ci -am"Added coffee brewer"
+git co -b feature1-s
+git ls
+git rebase -i master
+git ls
+git diff HEAD^
+git co feature1
+git ls
+git dlc
+git co feature1s
+git co feature1-s
+git ls
+git co master
+git st
+git merge feature1-s
+git branch
+git branch -d feature1-s
+git branch -d feature1
+git branch -D feature1
+git st
+git ls
+
+echo BRANCHING NON FAST FORWARD, CONFLICT
+cd ..
+git clone demo1/ demo-janis
+cd demo-janis/
+git config user.name Janis
+git config user.email janis@spindrift.com
+vim AUTHORS 
+git ci -am"Reordered list according to spec [BUG-123]"
+cd ../demo1
+git ls
+git remote add janis ../demo-janis
+cat .git/config 
+git co -b bug-555
+vim AUTHORS 
+git ci -am"Renamed Authors Dudes [BUG-555]"
+git co master
+git pull janis master
+git dlc
+git br
+git merge bug-555
+git st
+git status
+vim AUTHORS 
+git add AUTHORS 
+git status
+git commit
+echo this will create a merge commit, which often we dont want
+echo alternative way
+echo using rebase
+git co bug-555
+git fetch janis
+git rebase master
+git co master
+git reset --hard HEAD~2
+git pull janis master
+git co bug-555
+git rh1
+git rh1
+ll
+vim AUTHORS 
+git st
+git ci -am"Renamed Authors -> Dudes [BUG-555]"
+git st
+git co master
+git co bug-555
+git rebase master
+git st
+git status
+vim AUTHORS 
+git rebase --continue
+git st
+git add AUTHORS 
+git rebase --continue
+git co master
+git merge bug-555
