@@ -19,7 +19,7 @@
 %section
   %hgroup{:style => "margin-top: 80px"}
     %h2 who am I?
-    %p
+    %p{:style => "margin-left: 120px"}
       Nicola Paolucci, 
       %a{:href => "http://twitter.com/durdn", :target => "_blank"} durdn
       on twitter, hacker and technology enthusiast,
@@ -57,7 +57,7 @@
       %em Why
       Git?
 
-    %p
+    %p{:style => "margin-left: 120px"}
       A
       %em high level overview
       of the differences and benefits of git compared to other centralized systems
@@ -80,9 +80,12 @@
       %li 
         Data Assurance
       %li
-        github (and bitbucket)
+        %em github
+        (and bitbucket)
       %li 
-        And much more...
+        And much
+        = succeed "..." do
+          %em more
 
   %details
     http://git-scm.com/about
@@ -97,6 +100,15 @@
 
   %details
     http://git-scm.com/about
+    %br
+    Frictionless Context Switching. Create a branch to try out an idea, commit a few times, switch back to where you branched from, apply a patch, switch back to where you are experimenting, and merge it in.
+    %br
+    Role-Based Codelines. Have a branch that always contains only what goes to production, another that you merge work into for testing, and several smaller ones for day to day work.
+    %br
+    Feature Based Workflow. Create new branches for each new feature you're working on so you can seamlessly switch back and forth between them, then delete each branch when that feature gets merged into your main line.
+    %br
+    Disposable Experimentation. Create a branch to experiment in, realize it's not going to work, and just delete it - abandoning the work—with nobody else ever seeing it (even if you've pushed other branches in the meantime).
+    %br
 
 %section
   %hgroup{:style => "margin-top: 80px"}
@@ -105,9 +117,19 @@
       %em fast
     %ul
       %li no, really...
+      %li 
+        One or two orders of magnitude faster than 
+        %em SVN
       %li
-        Look at this
-        %a{:href => "http://chart.apis.google.com/chart?chxt=x&cht=bvs&chl=git|svn&chd=t:0.601,82.843&chds=0,82.843&chs=100x125&chco=E09FA0|E05F49&chf=bg,s,fcfcfa&chtt=Log%20(File)", :target => "_blank"} Chart
+        Look at these
+        %a{:href => "/assets/git-speed.png", :target => "_blank"} Charts
+
+%section
+  %hgroup{:style => "margin-top: 80px"}
+    %h3
+      git is 
+      %em fast
+    %img{:src => "/assets/git-speed.png"}
 
 %section
   %hgroup{:style => "margin-top: 80px"}
@@ -124,7 +146,10 @@
       %li Subversion style workflow
       %li Integration manager workflow
       %li Dictator And Lieutenants workflow
-      %li etc.
+      %li 
+        Some visual 
+        %a{:href => "http://git-scm.com/about/distributed", :target => "_blank"}
+          %em Aid
 
 %section
   %hgroup{:style => "margin-top: 80px"}
@@ -138,10 +163,23 @@
       The
       %em Staging
       Area
+    %img{:src => "http://git-scm.com/images/about/index1.png",:style => "margin-left: 250px"}
     %ul
       %li Intermediate area where commits are prepared.
-      %li Ignore this feature adding -a to your commits
-      http://git-scm.com/images/about/index1.png
+      %li
+        Ignore this feature adding -a to your commits
+
+%section
+  %hgroup{:style => "margin-top: 80px"}
+    %h3 
+      %em github
+      (and Atlassian bitbucket)
+    %ul
+      %li De-facto standard for open source development
+      %li sending pull requests is trivially easy
+      %li Seamless cooperation and coordination
+      %li code reviews become natural
+      %li charts and visibility
 
 %section
   %hgroup{:style => "margin-top: 80px"}
@@ -175,12 +213,16 @@
   %hgroup{:style => "margin-top: 80px"}
   %h3 Important Concepts
   %ul.incremental
-    %li Git tracks content, not files
-    %li Snapshots, not differences
     %li Everything is local
+    %li
+      Git tracks content, not files
+    %li Snapshots, not differences
+    %li Look at these images...
 
-    http://git-scm.com/figures/18333fig0104-tn.png
-    http://git-scm.com/figures/18333fig0105-tn.png
+%section
+  %hgroup{:style => "margin-top: 80px"}
+    %img{:src => "http://git-scm.com/figures/18333fig0104-tn.png",:style => "margin-left: 100px"}
+    %img{:src => "http://git-scm.com/figures/18333fig0105-tn.png",:style => "margin-top:20px; margin-left: 100px"}
 
 %section
   %hgroup{:style => "margin-top: 80px"}
@@ -194,12 +236,13 @@
       %li Modified
       %li Staged
 
-    http://git-scm.com/figures/18333fig0106-tn.png
+    %img{:src => "http://git-scm.com/figures/18333fig0106-tn.png",:style => "position: relative; width:300px; height:280px; margin-left: 450px; top: -300px"}
+    
 
 %section
   %hgroup{:style => "margin-top: 80px"}
     %h3 File status lifecycle 
-    http://git-scm.com/figures/18333fig0201-tn.png
+    %img{:src => "http://git-scm.com/figures/18333fig0201-tn.png",:style => "margin-left: 100px"}
 
 %section
   %hgroup
