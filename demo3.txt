@@ -1,0 +1,59 @@
+echo filenames that match a pattern
+
+$ git config -l | grep ls-files
+alias.f=!git ls-files | grep -i
+
+$ git f userprofile
+sol/delixl-bizui/config/atg/userprofiling/internalUserProfile.xml
+sol/delixl-bizui/config/atg/userprofiling/userProfile.xml
+sol/delixl-core/config/atg/userprofiling/userProfile.xml
+sol/delixl-core/config/schemaFiles/customersMapping+UserProfiles+organization.xsd
+sol/delixl-core/src/main/resources/delixl/b2bcommerce/UserProfileTemplateResources.properties
+
+Changes to a file
+
+git log -u sol/delixl-bizui/config/atg/userprofiling/userProfile.xml
+
+Latest commits by user
+
+$ git ls -10 --author kieran
+2035cf3 MNT-26: Removed CSS capitalisation of facets. [kieran]
+84fbe13 OPS-246: Fix for unsupported multiple background images, resulting in broken GET request in IE. [kieran]
+ed2376e BUG-1178: Fixed by initialising auto save on newly loaded PL items. [kieran]
+c05ec45 BUG-1177: Added missing 'Bewaren' button. [kieran]
+c1ccdcd FUN-1476: Removed category sort options for this release. [kieran]
+4ffdad2 BUG-1172: Re-instated quantity update reload function. [kieran]
+7d58cd0 BUG-1133: Fixed CSS selector for PL tables (now based on table class). [kieran]
+f7622ea BUG-1172: Removed quantity validation to see if this improves client side performance. [kieran]
+c6e03f7 FUN-1477: Extending column widths to accommodate sorting arrows. [kieran]
+6717f60 FUN-1476: Implemented category sorting on the manage purchase list page. [kieran]
+
+grep codebase at lightning speed
+
+git gr mediarootpath
+
+only properties
+
+git f .properties | xargs grep -i mediarootpath
+
+diff/inspect a specific commit
+
+$ git ls | grep BUG-1187
+25c3701 BUG-1187 IE8 and IE6 fix for product detail page. [andreas]
+7040e47 BUG-1187 Adjustments for IE8. [andreas]
+
+$ git config -l | grep dr
+alias.dr=!f() { git diff $1^..$1; }; f
+
+$ git dr 25c3701
+
+Check if a fix has been applied to the production branch
+
+changes in 21plus branch that are not in the trunk:
+git cherry -v --abbrev master s21plus
+git cherry -v --abbrev master s21plus | grep -v ^\- | tail -n+5 | cut -c 3-
+
+Who and when a piece of code was removed
+git ll | less
+grep Group.jsp
+
