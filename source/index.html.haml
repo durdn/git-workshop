@@ -246,7 +246,7 @@
 
 %section
   %hgroup
-  %h2 First DEMO
+  %h2 DEMO 1: Basics
   %details
     %pre
       \# DEMO PART1 BASIC STUFF
@@ -354,7 +354,10 @@
 
 %section
   %hgroup
-  %h2 DEMO 2: (Local) Branches and Real World Workflow
+    %h2
+      DEMO 2: (Local)
+      %em Branches
+      and Real World Workflow
   %details
     %pre
 
@@ -371,6 +374,12 @@
         %em rebase
         to merge in short lived branches
       %li Handling conflicts is easy
+      %li
+        If I forgot to talk about the
+        %em stash
+        ,remind me
+
+        
 
 
 %section
@@ -390,8 +399,19 @@
         cloning a remote repository creates an
         %em origin
       %li you can use multiple protocols (ssh, https, git)
-      %li normal flow: clone, pull, push (rebase)
+      %li normal flow: clone, push, pull, push
       %li pull = fetch and merge
+      %li 
+        some (like me) prefer
+        %em rebase
+        to pull
+
+%section
+  %hgroup{:style => "margin-top: 80px"}
+    %h3
+      Remote Repositories and Cooperation
+      %em [2]
+    %ul.incremental
       %li 
         Add the 
         %em remotes
@@ -404,7 +424,6 @@
         %em Upstream
         remote
 
-
 %section
   %hgroup
     %h2
@@ -415,11 +434,19 @@
     %h3
       Rewriting History and going back in Time
     %ul
-      %li Rebase interactive (git rebase -i HEAD~10)
-      %li branch and use
-      %pre git reset --hard
+      %li Rebase interactive
+      %pre git rebase -i HEAD~10
+      %pre git rebase -i master
+      %li going back in time: branch first then use
+      %pre git reset --hard HEAD~[how-many-commits]
       %li
-        %em ALERT, you must know what you are doing!
+        %em ALERT
+        you must know what you are doing!
+
+%section
+  %hgroup
+    %h2
+      DEMO 4: Rewriting history and going back in time
 
 %section
   %hgroup{:style => "margin-top: 80px"}
@@ -438,7 +465,7 @@
 %section
   %hgroup
     %h2
-      DEMO SEARCH SUPERPOWERS
+      DEMO 5: SEARCH SUPERPOWERS
 
 %section
   %hgroup{:style => "margin-top: 80px"}
@@ -454,7 +481,7 @@
 %section
   %hgroup
     %h2
-      DEMO SVN INTEROPERABILITY
+      DEMO 6: SVN INTEROPERABILITY
     
 %section
   %h2 Thank you!
@@ -474,40 +501,25 @@
       All you've seen and more can be found on the redesigned
       %a{:href => "http://git-scm.com/about", :target => "_blank"} git-scm
       website
+  %details
+    %pre
+      local branches
+      remote branches
+      the stash
+      the power to rewrite history!
+      rebase magic
 
+      interactivity commit --interactive, rebase --interactive
 
-%section
-  %pre
-    local branches
-    remote branches
-    the staging area / index
-    the stash
-    the power to rewrite history!
-    rebase magic
+      A hands on demo on the basic workflow with git
+      //-------------------------------------------------------
+      basic flow: clone, pull, code, push
+      proper flow with feature branch: clone, pull, feature branch, rebase branch, merge master, push
+      reset and reset hard
+      discarding local changes
+      discarding commits in the local branch
+      travel back in time with reset --hard
 
-    local branches
-    listing commits
-    tags and range operations
-    rebase to clean up history
-    pull vs rebase
-
-    interactivity commit --interactive, rebase --interactive
-
-    A hands on demo on the basic workflow with git
-    //-------------------------------------------------------
-    basic flow: clone, pull, code, push
-    proper flow with feature branch: clone, pull, feature branch, rebase branch, merge master, push
-    reset and reset hard
-    discarding local changes
-    discarding commits in the local branch
-    travel back in time with reset --hard
-
-
-    A hands on demo of interoperability with svn
-    A hands on demo of lightweight branch management with git/svn.
-    Much needed tips needed for git/svn interoperability
-
-
-    Footnotes:
-    you can find the aliases used in this presentation at:
-    https://github.com/durdn/cfg/blob/master/.gitconfig
+      A hands on demo of interoperability with svn
+      A hands on demo of lightweight branch management with git/svn.
+      Much needed tips needed for git/svn interoperability
