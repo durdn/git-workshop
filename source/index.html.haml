@@ -503,22 +503,6 @@
       DEMO 5: SEARCH SUPERPOWERS
 
 %section
-  %hgroup{:style => "margin-top: 80px"}
-    %h3
-      Interoperability with Subversion
-    %ul.incremental
-      %li Fasten your seatbelts
-      %li This requires you to grasp perfectly well all of the above, and some more
-      %li git svn clone
-      %li git svn rebase
-      %li git svn dcommit
-
-%section
-  %hgroup
-    %h2
-      DEMO 6: SVN INTEROPERABILITY
-    
-%section
   %h2 Thank you!
   %ul
     %li
@@ -562,3 +546,53 @@
       A hands on demo of interoperability with svn
       A hands on demo of lightweight branch management with git/svn.
       Much needed tips needed for git/svn interoperability
+
+%section
+  %hgroup{:style => "margin-top: 80px"}
+    %h3
+      Extra: Interoperability with
+      %em Subversion
+    %ul.incremental
+      %li Fasten your seatbelts
+      %li This requires you to grasp perfectly well all of the above, and some more
+      %li git svn clone
+      %li git svn rebase
+      %li git svn dcommit
+
+%section
+  %hgroup
+    %h2
+      DEMO 6: SVN INTEROPERABILITY
+  %details
+    Find when a svn branch was created:
+
+    %pre
+      $ svn log --stop-on-copy http://145.7.5.8/svn/project/branches/r1.2.0
+
+    Clone all branches shallowly with git-svn:
+
+    %pre
+      git svn clone -r14280:HEAD -s http://145.7.5.8/svn/project project
+
+    (r14280 is 20 commits before the branch was created, to have in the git history a bit of context).
+    
+    In general setting up git-svn is quite easy. Have a look here:
+    http://andy.delcambre.com/2008/03/04/git-svn-workflow.html
+    http://www.jukie.net/~bart/blog/svn-branches-in-git
+
+    Make sure git ignores the same files as svn (Append svn:ignore settings to the default git exclude file):
+    %pre 
+      git svn show-ignore >> .git/info/exclude
+
+
+    Alternative method: The magical update-index --assume-unchanged:
+    http://stackoverflow.com/questions/655243/ignore-modified-but-not-committed-files-in-git
+
+    Untrack files without deleting them:
+    http://progit.org/book/ch2-2.html
+    %pre
+      git st | grep .svn | awk {'print $3'} | xargs git rm --cached
+
+    When a svn repository moves:
+
+    https://git.wiki.kernel.org/index.php/GitSvnSwitch
